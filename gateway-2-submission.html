@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is required for a Gateway 2 submission? | Jordi</title>
+  <meta name="description" content="A complete practical guide to Gateway 2 submission requirements under the Building Safety Act 2022. What the Building Safety Regulator requires, how to structure the submission, and what causes rejections.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.heyjordi.com/gateway-2-submission">
+  <meta property="og:title" content="What is required for a Gateway 2 submission?">
+  <meta property="og:description" content="A complete practical guide to Gateway 2 submission requirements under the Building Safety Act 2022. What the Building Safety Regulator requires, how to structure the submission, and what causes rejections.">
+  <meta property="og:site_name" content="Jordi">
+  <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:  #1A1A2E; --blue:  #0070C0; --mid:   #2E5FA3;
+    --ask:   #D86DCB; --lite:  #00B050; --grey:  #666666;
+    --white: #FFFFFF; --off:   #F5F8FC; --border:#D0DCF0;
+    --muted: #4a5568; --font:  Arial, Helvetica, sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--navy); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  /* NAV */
+  .site-nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 52px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+  .site-logo { font-size: 1.5rem; font-weight: 700; color: var(--navy); text-decoration: none; letter-spacing: -0.02em; }
+  .nav-cta { font-size: 0.8rem; font-weight: 700; color: var(--white); background: var(--blue); padding: 9px 18px; border-radius: 6px; text-decoration: none; }
+  .nav-cta:hover { background: #005aa8; }
+
+  /* HERO */
+  .article-hero { background: var(--white); border-bottom: 3px solid var(--blue); padding: 56px 52px 48px; }
+  .article-hero-inner { max-width: 760px; margin: 0 auto; }
+  .breadcrumb { font-size: 0.73rem; color: var(--grey); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--blue); text-decoration: none; font-weight: 600; }
+  .article-tag { display: inline-block; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); border: 1.5px solid var(--blue); padding: 4px 12px; border-radius: 100px; margin-bottom: 16px; }
+  .article-hero h1 { font-size: clamp(1.65rem, 3.5vw, 2.5rem); font-weight: 700; line-height: 1.1; color: var(--navy); letter-spacing: -0.025em; margin-bottom: 18px; }
+  .article-hero .lead { font-size: 1rem; color: var(--muted); line-height: 1.78; max-width: 620px; border-left: 3px solid var(--blue); padding-left: 18px; margin-top: 4px; }
+  .article-meta { font-size: 0.72rem; color: var(--grey); margin-top: 20px; display: flex; gap: 16px; align-items: center; }
+  .meta-dot { color: var(--border); }
+
+  /* BODY */
+  .article-body { max-width: 760px; margin: 0 auto; padding: 52px 52px 44px; }
+  .article-body h2 { font-size: 1.45rem; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; margin: 44px 0 14px; line-height: 1.2; padding-bottom: 10px; border-bottom: 2px solid var(--border); }
+  .article-body h2:first-of-type { margin-top: 0; }
+  .article-body h3 { font-size: 0.97rem; font-weight: 700; color: var(--navy); margin: 24px 0 8px; }
+  .article-body p { font-size: 0.96rem; color: var(--muted); line-height: 1.82; margin-bottom: 18px; }
+  .article-body strong { color: var(--navy); font-weight: 700; }
+  .article-body a { color: var(--blue); font-weight: 600; text-decoration: none; }
+  .article-body a:hover { text-decoration: underline; }
+  .article-body ul { margin: 0 0 18px; padding-left: 0; list-style: none; }
+  .article-body li { font-size: 0.96rem; color: var(--muted); line-height: 1.78; margin-bottom: 9px; padding-left: 22px; position: relative; }
+  .article-body li::before { content: '\2014'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+  .article-body li.check::before { content: '\2713'; color: var(--lite); }
+  .article-body li.sq::before { content: '\25A1'; color: var(--blue); font-size: 0.85rem; top: 3px; font-weight: 400; }
+
+  /* CALLOUT */
+  .callout { background: var(--off); border-left: 4px solid var(--blue); padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 26px 0; }
+  .callout p { margin: 0; font-size: 0.92rem; color: var(--navy); line-height: 1.72; }
+  .callout a { color: var(--blue); font-weight: 700; }
+
+  /* WARNING */
+  .warning { background: #fffbeb; border-left: 4px solid #d97706; padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 26px 0; }
+  .warning p { margin: 0; font-size: 0.92rem; color: #92400e; line-height: 1.72; }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 26px 0; border-radius: 8px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  th { background: var(--navy); color: var(--white); padding: 11px 14px; text-align: left; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--muted); vertical-align: top; line-height: 1.6; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--off); }
+  td:first-child { font-weight: 700; color: var(--navy); }
+  .badge { display: inline-block; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; white-space: nowrap; }
+  .badge-all { background: rgba(0,112,192,0.1); color: var(--blue); }
+  .badge-res { background: rgba(0,176,80,0.1); color: var(--lite); }
+  .badge-cond { background: rgba(46,95,163,0.1); color: var(--mid); }
+
+  /* INLINE CTA */
+  .inline-cta { background: var(--navy); border-radius: 10px; padding: 36px; margin: 44px 0; text-align: center; }
+  .inline-cta h3 { font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 9px; letter-spacing: -0.01em; }
+  .inline-cta p { font-size: 0.87rem; color: rgba(255,255,255,0.55); margin-bottom: 22px; line-height: 1.65; }
+  .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { display: inline-block; background: var(--blue); color: var(--white); font-weight: 700; font-size: 0.84rem; padding: 11px 22px; border-radius: 6px; text-decoration: none; font-family: Arial, sans-serif; }
+  .btn-primary:hover { background: #005aa8; }
+  .btn-secondary { display: inline-block; background: transparent; color: rgba(255,255,255,0.65); font-size: 0.84rem; padding: 11px 22px; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; text-decoration: none; font-family: Arial, sans-serif; }
+
+  /* CHECKLIST BOX */
+  .checklist { background: var(--off); border-radius: 10px; padding: 28px 32px; margin: 26px 0; border: 1px solid var(--border); }
+  .checklist h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 16px; }
+
+  /* PHASE TIMELINE */
+  .timeline { margin: 26px 0; display: flex; flex-direction: column; gap: 2px; }
+  .phase { display: flex; gap: 0; }
+  .phase-badge { min-width: 52px; background: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; color: var(--white); flex-shrink: 0; padding: 16px 8px; }
+  .phase-content { flex: 1; background: var(--off); border-left: 3px solid var(--blue); padding: 16px 20px; }
+  .phase-content h3 { font-size: 0.94rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .phase-content p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+  /* REQ GRID */
+  .req-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin: 26px 0; }
+  .req-card { background: var(--off); border-radius: 8px; padding: 20px; border: 1px solid var(--border); border-top: 3px solid var(--blue); }
+  .req-card h3 { font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
+  .req-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+  /* SVG diagrams */
+  .diagram-wrap { margin: 28px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--off); padding: 24px; }
+  .diagram-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); margin-bottom: 16px; }
+
+  /* RELATED */
+  .related { background: var(--off); padding: 48px 52px; border-top: 1px solid var(--border); }
+  .related-inner { max-width: 760px; margin: 0 auto; }
+  .related-eyebrow { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
+  .related h2 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 18px; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .related-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; text-decoration: none; display: block; transition: border-color 0.18s; border-top: 3px solid transparent; }
+  .related-card:hover { border-color: var(--blue); border-top-color: var(--blue); }
+  .related-card span { font-size: 0.63rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); }
+  .related-card h3 { font-size: 0.87rem; font-weight: 700; color: var(--navy); margin-top: 6px; line-height: 1.4; }
+
+  /* FOOTER */
+  footer { background: var(--navy); padding: 32px 52px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+  .footer-logo { font-size: 1.2rem; font-weight: 700; color: rgba(255,255,255,0.4); text-decoration: none; }
+  .footer-legal { font-size: 0.7rem; color: rgba(255,255,255,0.22); text-align: right; line-height: 1.65; }
+  .footer-legal a { color: rgba(255,255,255,0.28); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .site-nav, .article-hero, .article-body, .related, footer { padding-left: 22px; padding-right: 22px; }
+    footer { flex-direction: column; align-items: flex-start; }
+    .footer-legal { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="/" class="site-logo">Jordi</a>
+  <a href="/#notify" class="nav-cta">Get early access</a>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb"><a href="/">Jordi</a> &rsaquo; Building Regulations guides</div>
+    <span class="article-tag">Gateway submissions</span>
+    <h1>What is required for a Gateway 2 submission?</h1>
+    <p class="lead">Gateway 2 is the most critical regulatory checkpoint in the Building Safety Act regime. No construction may commence on a Higher-Risk Building without Building Safety Regulator approval. This is a complete guide to what the submission must contain and how to prepare it.</p>
+    <div class="article-meta">
+      <span>Published by Jordi</span><span class="meta-dot">&middot;</span>
+      <span>Updated 2026</span><span class="meta-dot">&middot;</span>
+      <span>10 minute read</span>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <h2>What Gateway 2 is</h2>
+  <p>Gateway 2 is the second of three regulatory checkpoints for Higher-Risk Buildings introduced by the Building Safety Act 2022. It sits at RIBA Stage 4 (Technical Design) and must be cleared before construction commences. No work may start on site without formal Building Safety Regulator approval of the submission.</p>
+
+  <div class="diagram-wrap">
+  <p class="diagram-label">The three-Gateway approval process &mdash; Higher-Risk Buildings</p>
+  <svg viewBox="0 0 720 140" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+    <!-- Connecting line -->
+    <line x1="60" y1="52" x2="660" y2="52" stroke="#D0DCF0" stroke-width="2"/>
+    <!-- G1 -->
+    <circle cx="120" cy="52" r="28" fill="#1A1A2E"/>
+    <text x="120" y="47" text-anchor="middle" fill="white" font-family="Arial" font-size="10" font-weight="700">Gateway</text>
+    <text x="120" y="61" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="700">1</text>
+    <text x="120" y="100" text-anchor="middle" fill="#1A1A2E" font-family="Arial" font-size="11" font-weight="700">Planning</text>
+    <text x="120" y="116" text-anchor="middle" fill="#4a5568" font-family="Arial" font-size="10">RIBA Stage 2</text>
+    <text x="120" y="130" text-anchor="middle" fill="#4a5568" font-family="Arial" font-size="9">Fire strategy at planning</text>
+    <!-- G2 -->
+    <circle cx="360" cy="52" r="34" fill="#0070C0"/>
+    <text x="360" y="44" text-anchor="middle" fill="white" font-family="Arial" font-size="10" font-weight="700">Gateway</text>
+    <text x="360" y="62" text-anchor="middle" fill="white" font-family="Arial" font-size="20" font-weight="700">2</text>
+    <text x="360" y="104" text-anchor="middle" fill="#0070C0" font-family="Arial" font-size="11" font-weight="700">Before construction</text>
+    <text x="360" y="118" text-anchor="middle" fill="#4a5568" font-family="Arial" font-size="10">RIBA Stage 4</text>
+    <text x="360" y="132" text-anchor="middle" fill="#4a5568" font-family="Arial" font-size="9">Full BSR approval required</text>
+    <!-- G3 -->
+    <circle cx="600" cy="52" r="28" fill="#1A1A2E"/>
+    <text x="600" y="47" text-anchor="middle" fill="white" font-family="Arial" font-size="10" font-weight="700">Gateway</text>
+    <text x="600" y="61" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="700">3</text>
+    <text x="600" y="100" text-anchor="middle" fill="#1A1A2E" font-family="Arial" font-size="11" font-weight="700">Completion</text>
+    <text x="600" y="116" text-anchor="middle" fill="#4a5568" font-family="Arial" font-size="10">RIBA Stage 6</text>
+    <text x="600" y="130" text-anchor="middle" fill="#4a5568" font-family="Arial" font-size="9">Before occupation</text>
+    <!-- Jordi label -->
+    <rect x="290" y="8" width="140" height="18" rx="9" fill="rgba(0,112,192,0.12)"/>
+    <text x="360" y="21" text-anchor="middle" fill="#0070C0" font-family="Arial" font-size="9" font-weight="700">Jordi Professional prepares this</text>
+  </svg>
+</div>
+
+  <div class="warning">
+    <p><strong>No approval, no start on site.</strong> Starting construction on a Higher-Risk Building without Gateway 2 approval is a criminal offence. The Building Safety Regulator has enforcement powers including stop notices and prosecution.</p>
+  </div>
+
+  <h2>The statutory assessment period</h2>
+  <p>The Building Safety Regulator has a statutory <strong>8-week period</strong> to assess a Gateway 2 application from the date it is received, extendable to 12 weeks for complex cases. The clock stops if the Regulator requests further information and restarts when that information is provided. Incomplete or inadequately evidenced applications will be returned &mdash; resetting the clock entirely.</p>
+
+  <h2>What the submission must contain</h2>
+
+  <h3>1. Full plans application</h3>
+  <p>Technical drawings at RIBA Stage 4 detail &mdash; floor plans, sections, elevations, and relevant details demonstrating how the design meets each applicable requirement. Stage 3 drawings submitted as Stage 4 is among the most common causes of rejection.</p>
+
+  <h3>2. Building Regulations compliance statement</h3>
+  <p>A formal, evidenced statement from the BRPD linking specific design decisions to specific Approved Document requirements. Vague statements of intent are not accepted by the Building Safety Regulator.</p>
+
+  <h3>3. Compliance drawing set</h3>
+  <p>The most practically demanding element. The compliance drawing set places the relevant floor plan on a sheet with the applicable regulation extracts and dimensional requirements adjacent to it. This allows the Regulator to see both the design and the standard it is assessed against on a single document. Producing this manually is highly labour-intensive. It is the primary function of Jordi Professional&rsquo;s Module 3.</p>
+
+  <h3>4. Fire and Emergency File</h3>
+  <p>The fire safety information for the building &mdash; fire strategy, means of escape, firefighting provisions, compartmentation strategy. Must be updated during construction and handed over at Gateway 3.</p>
+
+  <h3>5. BRPD declaration</h3>
+  <p>A signed declaration from the named BRPD confirming duties have been fulfilled and information provided is accurate. This declaration carries personal liability.</p>
+
+  <h3>6. Change control log (if applicable)</h3>
+  <p>If the design has changed since Gateway 1, a log documenting each change, its categorisation, and how it was managed.</p>
+
+  <h2>Common causes of rejection or query</h2>
+  <ul>
+    <li>Compliance drawings that do not clearly evidence dimensional requirements &mdash; travel distances, door widths, turning circles.</li>
+    <li>Compliance statements making general assertions rather than linking design to specific Approved Document clauses.</li>
+    <li>Designs at insufficient technical resolution (Stage 3 drawings submitted as Stage 4).</li>
+    <li>Missing or incomplete Fire and Emergency File.</li>
+    <li>Inconsistencies between the compliance statement and the drawings.</li>
+    <li>BRPD declaration missing or unsigned.</li>
+  </ul>
+
+  <h2>How to prepare &mdash; the right approach</h2>
+  <p>The most common strategic error is treating Gateway 2 as a submission-stage task. The documentation required can only be produced efficiently if compliance checking has been continuous throughout design from Stage 2 onwards. A practice that begins at Stage 4 faces weeks of retrospective work. A practice that has checked and documented at each Work Stage faces an assembly task &mdash; not a creation task.</p>
+
+  <div class="checklist">
+    <h3>Gateway 2 preparation checklist</h3>
+    <ul>
+      <li class="sq">Compliance checking documented at Stage 2, Stage 3, and Stage 4 &mdash; not retrospectively assembled.</li>
+      <li class="sq">All applicable Parts identified and checked against project parameters.</li>
+      <li class="sq">Full plans available at RIBA Stage 4 technical detail.</li>
+      <li class="sq">Compliance drawing set prepared &mdash; plan with regulation extract adjacent for each check.</li>
+      <li class="sq">Compliance statement drafted, evidenced, and reviewed by BRPD.</li>
+      <li class="sq">Fire and Emergency File prepared and reviewed.</li>
+      <li class="sq">Change control log complete if any changes made since Gateway 1.</li>
+      <li class="sq">BRPD declaration prepared and ready for signature.</li>
+      <li class="sq">Application form completed and verified.</li>
+    </ul>
+  </div>
+
+  <div class="inline-cta">
+    <h3>Jordi Professional produces your Gateway 2 documentation automatically</h3>
+    <p>Module 3 assembles the compliance drawing set as a natural by-product of the compliance checking process. No manual formatting. No retrospective assembly.</p>
+    <div class="cta-row">
+      <a href="/" class="btn-primary">Learn about Jordi Professional</a>
+      <a href="/golden-thread" class="btn-secondary">What is the Golden Thread? &rarr;</a>
+    </div>
+  </div>
+
+</article>
+
+<section class="related">
+  <div class="related-inner">
+    <p class="related-eyebrow">Continue reading</p>
+    <h2>Related guides</h2>
+    <div class="related-grid">
+      <a href="/building-safety-act-2022-architects" class="related-card"><span>Building Safety Act</span><h3>What does the Building Safety Act 2022 mean for building designers?</h3></a>
+      <a href="/principal-designer-role" class="related-card"><span>Principal Designer</span><h3>What is the Building Regulations Principal Designer role?</h3></a>
+      <a href="/golden-thread" class="related-card"><span>Golden Thread</span><h3>What is the Golden Thread of information?</h3></a>
+      <a href="/building-regulations-parts-apply" class="related-card"><span>Compliance</span><h3>Which Parts of the Building Regulations apply to my project?</h3></a>
+    </div>
+  </div>
+</section>
+<footer>
+  <a href="/" class="footer-logo">Jordi</a>
+  <div class="footer-legal">
+    &copy; 2026 Jordi. All rights reserved.<br>
+    <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp;
+    <a href="mailto:team@heyjordi.com">hello@heyjordi.com</a>
+  </div>
+</footer>
+</body>
+</html>

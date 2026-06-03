@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which Parts of the Building Regulations apply to my project? | Jordi</title>
+  <meta name="description" content="A structured guide to identifying which Approved Documents are relevant to your project — by building type, height, use class, and sprinkler provision. Full Approved Documents reference table.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.heyjordi.com/building-regulations-parts-apply">
+  <meta property="og:title" content="Which Parts of the Building Regulations apply to my project?">
+  <meta property="og:description" content="A structured guide to identifying which Approved Documents are relevant to your project — by building type, height, use class, and sprinkler provision. Full Approved Documents reference table.">
+  <meta property="og:site_name" content="Jordi">
+  <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:  #1A1A2E; --blue:  #0070C0; --mid:   #2E5FA3;
+    --ask:   #D86DCB; --lite:  #00B050; --grey:  #666666;
+    --white: #FFFFFF; --off:   #F5F8FC; --border:#D0DCF0;
+    --muted: #4a5568; --font:  Arial, Helvetica, sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--navy); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  /* NAV */
+  .site-nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 52px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+  .site-logo { font-size: 1.5rem; font-weight: 700; color: var(--navy); text-decoration: none; letter-spacing: -0.02em; }
+  .nav-cta { font-size: 0.8rem; font-weight: 700; color: var(--white); background: var(--blue); padding: 9px 18px; border-radius: 6px; text-decoration: none; }
+  .nav-cta:hover { background: #005aa8; }
+
+  /* HERO */
+  .article-hero { background: var(--white); border-bottom: 3px solid var(--blue); padding: 56px 52px 48px; }
+  .article-hero-inner { max-width: 760px; margin: 0 auto; }
+  .breadcrumb { font-size: 0.73rem; color: var(--grey); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--blue); text-decoration: none; font-weight: 600; }
+  .article-tag { display: inline-block; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); border: 1.5px solid var(--blue); padding: 4px 12px; border-radius: 100px; margin-bottom: 16px; }
+  .article-hero h1 { font-size: clamp(1.65rem, 3.5vw, 2.5rem); font-weight: 700; line-height: 1.1; color: var(--navy); letter-spacing: -0.025em; margin-bottom: 18px; }
+  .article-hero .lead { font-size: 1rem; color: var(--muted); line-height: 1.78; max-width: 620px; border-left: 3px solid var(--blue); padding-left: 18px; margin-top: 4px; }
+  .article-meta { font-size: 0.72rem; color: var(--grey); margin-top: 20px; display: flex; gap: 16px; align-items: center; }
+  .meta-dot { color: var(--border); }
+
+  /* BODY */
+  .article-body { max-width: 760px; margin: 0 auto; padding: 52px 52px 44px; }
+  .article-body h2 { font-size: 1.45rem; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; margin: 44px 0 14px; line-height: 1.2; padding-bottom: 10px; border-bottom: 2px solid var(--border); }
+  .article-body h2:first-of-type { margin-top: 0; }
+  .article-body h3 { font-size: 0.97rem; font-weight: 700; color: var(--navy); margin: 24px 0 8px; }
+  .article-body p { font-size: 0.96rem; color: var(--muted); line-height: 1.82; margin-bottom: 18px; }
+  .article-body strong { color: var(--navy); font-weight: 700; }
+  .article-body a { color: var(--blue); font-weight: 600; text-decoration: none; }
+  .article-body a:hover { text-decoration: underline; }
+  .article-body ul { margin: 0 0 18px; padding-left: 0; list-style: none; }
+  .article-body li { font-size: 0.96rem; color: var(--muted); line-height: 1.78; margin-bottom: 9px; padding-left: 22px; position: relative; }
+  .article-body li::before { content: '\2014'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+  .article-body li.check::before { content: '\2713'; color: var(--lite); }
+  .article-body li.sq::before { content: '\25A1'; color: var(--blue); font-size: 0.85rem; top: 3px; font-weight: 400; }
+
+  /* CALLOUT */
+  .callout { background: var(--off); border-left: 4px solid var(--blue); padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 26px 0; }
+  .callout p { margin: 0; font-size: 0.92rem; color: var(--navy); line-height: 1.72; }
+  .callout a { color: var(--blue); font-weight: 700; }
+
+  /* WARNING */
+  .warning { background: #fffbeb; border-left: 4px solid #d97706; padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 26px 0; }
+  .warning p { margin: 0; font-size: 0.92rem; color: #92400e; line-height: 1.72; }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 26px 0; border-radius: 8px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  th { background: var(--navy); color: var(--white); padding: 11px 14px; text-align: left; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--muted); vertical-align: top; line-height: 1.6; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--off); }
+  td:first-child { font-weight: 700; color: var(--navy); }
+  .badge { display: inline-block; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; white-space: nowrap; }
+  .badge-all { background: rgba(0,112,192,0.1); color: var(--blue); }
+  .badge-res { background: rgba(0,176,80,0.1); color: var(--lite); }
+  .badge-cond { background: rgba(46,95,163,0.1); color: var(--mid); }
+
+  /* INLINE CTA */
+  .inline-cta { background: var(--navy); border-radius: 10px; padding: 36px; margin: 44px 0; text-align: center; }
+  .inline-cta h3 { font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 9px; letter-spacing: -0.01em; }
+  .inline-cta p { font-size: 0.87rem; color: rgba(255,255,255,0.55); margin-bottom: 22px; line-height: 1.65; }
+  .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { display: inline-block; background: var(--blue); color: var(--white); font-weight: 700; font-size: 0.84rem; padding: 11px 22px; border-radius: 6px; text-decoration: none; font-family: Arial, sans-serif; }
+  .btn-primary:hover { background: #005aa8; }
+  .btn-secondary { display: inline-block; background: transparent; color: rgba(255,255,255,0.65); font-size: 0.84rem; padding: 11px 22px; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; text-decoration: none; font-family: Arial, sans-serif; }
+
+  /* CHECKLIST BOX */
+  .checklist { background: var(--off); border-radius: 10px; padding: 28px 32px; margin: 26px 0; border: 1px solid var(--border); }
+  .checklist h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 16px; }
+
+  /* PHASE TIMELINE */
+  .timeline { margin: 26px 0; display: flex; flex-direction: column; gap: 2px; }
+  .phase { display: flex; gap: 0; }
+  .phase-badge { min-width: 52px; background: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; color: var(--white); flex-shrink: 0; padding: 16px 8px; }
+  .phase-content { flex: 1; background: var(--off); border-left: 3px solid var(--blue); padding: 16px 20px; }
+  .phase-content h3 { font-size: 0.94rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .phase-content p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+  /* REQ GRID */
+  .req-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin: 26px 0; }
+  .req-card { background: var(--off); border-radius: 8px; padding: 20px; border: 1px solid var(--border); border-top: 3px solid var(--blue); }
+  .req-card h3 { font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
+  .req-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+  /* SVG diagrams */
+  .diagram-wrap { margin: 28px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--off); padding: 24px; }
+  .diagram-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); margin-bottom: 16px; }
+
+  /* RELATED */
+  .related { background: var(--off); padding: 48px 52px; border-top: 1px solid var(--border); }
+  .related-inner { max-width: 760px; margin: 0 auto; }
+  .related-eyebrow { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
+  .related h2 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 18px; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .related-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; text-decoration: none; display: block; transition: border-color 0.18s; border-top: 3px solid transparent; }
+  .related-card:hover { border-color: var(--blue); border-top-color: var(--blue); }
+  .related-card span { font-size: 0.63rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); }
+  .related-card h3 { font-size: 0.87rem; font-weight: 700; color: var(--navy); margin-top: 6px; line-height: 1.4; }
+
+  /* FOOTER */
+  footer { background: var(--navy); padding: 32px 52px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+  .footer-logo { font-size: 1.2rem; font-weight: 700; color: rgba(255,255,255,0.4); text-decoration: none; }
+  .footer-legal { font-size: 0.7rem; color: rgba(255,255,255,0.22); text-align: right; line-height: 1.65; }
+  .footer-legal a { color: rgba(255,255,255,0.28); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .site-nav, .article-hero, .article-body, .related, footer { padding-left: 22px; padding-right: 22px; }
+    footer { flex-direction: column; align-items: flex-start; }
+    .footer-legal { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="/" class="site-logo">Jordi</a>
+  <a href="/#notify" class="nav-cta">Get early access</a>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb"><a href="/">Jordi</a> &rsaquo; Building Regulations guides</div>
+    <span class="article-tag">Compliance fundamentals</span>
+    <h1>Which Parts of the Building Regulations apply to my project?</h1>
+    <p class="lead">Working out which Approved Documents are actually relevant &mdash; given building type, height, use class, and sprinkler provision &mdash; is less straightforward than it sounds. This guide walks through the key decisions and provides a full reference table.</p>
+    <div class="article-meta">
+      <span>Published by Jordi</span><span class="meta-dot">&middot;</span>
+      <span>Updated 2026</span><span class="meta-dot">&middot;</span>
+      <span>7 minute read</span>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <h2>Why this question matters</h2>
+  <p>The Building Regulations are expressed through Approved Documents &mdash; each covering a specific Part, from A (Structure) through to S (Electric vehicle infrastructure). Not all Parts apply to every project. Getting scope wrong in either direction is a problem: missing applicable Parts creates compliance risk; over-specifying creates unnecessary design constraints and documentation burden.</p>
+  <p>Under the Building Safety Act 2022, the BRPD must demonstrate compliance with the <em>applicable</em> regulations throughout design. Before you can demonstrate compliance, you need to establish scope.</p>
+
+  <div class="callout">
+    <p><strong>The fastest way to establish scope:</strong> Ask Jordi is a free tool that takes your building type, height, use class, and sprinkler provision and returns a project-specific relevant/not-relevant schedule of Parts in under two minutes. No account required. <a href="/">Try it free &rarr;</a></p>
+  </div>
+
+  <h2>The five key variables</h2>
+  <p>The applicable Parts depend on five primary variables. Each can change which documents apply and, within those documents, which thresholds govern your design.</p>
+
+  <div class="req-grid">
+    <div class="req-card">
+      <h3>1. Building use class</h3>
+      <p>Residential, commercial, mixed-use, healthcare, and educational buildings are treated differently across multiple Parts. Always establish use class first.</p>
+    </div>
+    <div class="req-card">
+      <h3>2. Height and storeys</h3>
+      <p>The 18-metre threshold for Higher-Risk Building status is most significant, but other thresholds affect travel distances, compartmentation, and escape provisions.</p>
+    </div>
+    <div class="req-card">
+      <h3>3. Sprinkler provision</h3>
+      <p>Whether sprinklers are present modifies thresholds across multiple Parts &mdash; most significantly Part B. This single variable changes the compliance targets your design is checked against.</p>
+    </div>
+    <div class="req-card">
+      <h3>4. New build or change of use</h3>
+      <p>Material changes of use trigger specific provisions across multiple Parts and often require compliance with requirements that would not apply to a new build of the same type.</p>
+    </div>
+    <div class="req-card">
+      <h3>5. Occupancy</h3>
+      <p>Whether a building is single household, multiple occupancy, or non-residential affects provisions within Parts B, M, F, and others.</p>
+    </div>
+  </div>
+
+  <h2>The Approved Documents &mdash; full reference table</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Part</th><th>Subject</th><th>Applicability</th><th>Notes for BRPD</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Part A</td><td>Structure</td><td><span class="badge badge-all">All buildings</span></td><td>Generally led by structural engineers; BRPD ensures coordination.</td></tr>
+        <tr><td>Part B</td><td>Fire Safety</td><td><span class="badge badge-all">All buildings</span></td><td>Most complex Part for BRPD. Two volumes: Vol 1 residential, Vol 2 other. Thresholds vary by height, occupancy, sprinklers. <strong>Jordi checks Part B.</strong></td></tr>
+        <tr><td>Part C</td><td>Resistance to contaminants and moisture</td><td><span class="badge badge-all">All buildings</span></td><td>Typically addressed through ground investigation reports.</td></tr>
+        <tr><td>Part D</td><td>Toxic substances</td><td><span class="badge badge-all">All buildings</span></td><td>Rarely a primary BRPD concern on new builds.</td></tr>
+        <tr><td>Part E</td><td>Resistance to sound</td><td><span class="badge badge-res">Residential / mixed use</span></td><td>Applies to dwellings and rooms for residential purposes. Requires acoustic testing.</td></tr>
+        <tr><td>Part F</td><td>Ventilation</td><td><span class="badge badge-all">All buildings</span></td><td>Requirements vary significantly by building type and occupancy.</td></tr>
+        <tr><td>Part G</td><td>Sanitation and water efficiency</td><td><span class="badge badge-all">All buildings</span></td><td>Water calculator submission required. Sanitation provision linked to occupancy numbers.</td></tr>
+        <tr><td>Part H</td><td>Drainage and waste disposal</td><td><span class="badge badge-all">All buildings</span></td><td>Typically coordinated with drainage engineers.</td></tr>
+        <tr><td>Part J</td><td>Combustion appliances</td><td><span class="badge badge-cond">Where applicable</span></td><td>Only where combustion appliances or fuel storage are present.</td></tr>
+        <tr><td>Part K</td><td>Protection from falling, collision and impact</td><td><span class="badge badge-all">All buildings</span></td><td>Stairs, guarding, and vehicle barriers. A common source of compliance issues on residential schemes.</td></tr>
+        <tr><td>Part L</td><td>Conservation of fuel and power</td><td><span class="badge badge-all">All buildings</span></td><td>SAP calculations for residential; SBEM for commercial. Energy modellers typically lead.</td></tr>
+        <tr><td>Part M</td><td>Access to and use of buildings</td><td><span class="badge badge-all">All buildings</span></td><td>Two volumes: dwellings and other. Category 2/3 accessible dwelling requirements for residential. <strong>Jordi checks Part M.</strong></td></tr>
+        <tr><td>Part O</td><td>Overheating</td><td><span class="badge badge-res">Residential</span></td><td>New residential buildings. TM59 assessment typically required.</td></tr>
+        <tr><td>Part P</td><td>Electrical safety</td><td><span class="badge badge-res">Dwellings</span></td><td>Typically addressed by electrical engineers.</td></tr>
+        <tr><td>Part Q</td><td>Security</td><td><span class="badge badge-res">Dwellings</span></td><td>Door and window security requirements. Frequently missed on new dwellings.</td></tr>
+        <tr><td>Part R</td><td>High-speed electronic communications</td><td><span class="badge badge-all">New buildings</span></td><td>Gigabit-ready ducting requirements for new buildings.</td></tr>
+        <tr><td>Part S</td><td>EV charging infrastructure</td><td><span class="badge badge-cond">Where applicable</span></td><td>New residential and non-residential buildings with associated car parking.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>The two Parts the BRPD owns directly</h2>
+  <p>While the BRPD coordinates compliance across all applicable Parts, two Parts are most directly owned by the BRPD and least typically delegated to specialist consultants:</p>
+  <ul>
+    <li><strong>Part B (Fire Safety)</strong> &mdash; fire strategy, escape route design, compartmentation strategy, and coordination of fire safety information. On Higher-Risk Buildings this includes the Fire and Emergency File.</li>
+    <li><strong>Part M (Accessibility)</strong> &mdash; ensuring the design achieves the required accessibility standards, including turning circle provision, door widths, level access, and dwelling category compliance.</li>
+  </ul>
+  <p>These are also the two Parts that Jordi&rsquo;s compliance checks address in the initial release &mdash; reflecting their central importance to the BRPD&rsquo;s Gateway submission preparation.</p>
+
+  <div class="inline-cta">
+    <h3>Get your project&rsquo;s Parts schedule in two minutes &mdash; free</h3>
+    <p>Ask Jordi maps your building type, height, use class, and sprinkler provision to a relevant/not-relevant schedule of all applicable Parts. No account required.</p>
+    <div class="cta-row">
+      <a href="/" class="btn-primary">Try Ask Jordi &mdash; free</a>
+      <a href="/gateway-2-submission" class="btn-secondary">Gateway 2 requirements &rarr;</a>
+    </div>
+  </div>
+
+</article>
+
+<section class="related">
+  <div class="related-inner">
+    <p class="related-eyebrow">Continue reading</p>
+    <h2>Related guides</h2>
+    <div class="related-grid">
+      <a href="/building-safety-act-2022-architects" class="related-card"><span>Building Safety Act</span><h3>What does the Building Safety Act 2022 mean for building designers?</h3></a>
+      <a href="/principal-designer-role" class="related-card"><span>Principal Designer</span><h3>What is the Building Regulations Principal Designer role?</h3></a>
+      <a href="/gateway-2-submission" class="related-card"><span>Gateway 2</span><h3>What is required for a Gateway 2 submission?</h3></a>
+      <a href="/golden-thread" class="related-card"><span>Golden Thread</span><h3>What is the Golden Thread of information?</h3></a>
+    </div>
+  </div>
+</section>
+<footer>
+  <a href="/" class="footer-logo">Jordi</a>
+  <div class="footer-legal">
+    &copy; 2026 Jordi. All rights reserved.<br>
+    <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp;
+    <a href="mailto:team@heyjordi.com">hello@heyjordi.com</a>
+  </div>
+</footer>
+</body>
+</html>

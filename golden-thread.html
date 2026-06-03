@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is the Golden Thread of information? | Jordi</title>
+  <meta name="description" content="A plain-English guide to the Golden Thread of information under the Building Safety Act 2022. What it requires, who is responsible at each stage, and what it means in practice for building design professionals.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.heyjordi.com/golden-thread">
+  <meta property="og:title" content="What is the Golden Thread of information?">
+  <meta property="og:description" content="A plain-English guide to the Golden Thread of information under the Building Safety Act 2022. What it requires, who is responsible at each stage, and what it means in practice for building design professionals.">
+  <meta property="og:site_name" content="Jordi">
+  <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:  #1A1A2E; --blue:  #0070C0; --mid:   #2E5FA3;
+    --ask:   #D86DCB; --lite:  #00B050; --grey:  #666666;
+    --white: #FFFFFF; --off:   #F5F8FC; --border:#D0DCF0;
+    --muted: #4a5568; --font:  Arial, Helvetica, sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--navy); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  /* NAV */
+  .site-nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 16px 52px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+  .site-logo { font-size: 1.5rem; font-weight: 700; color: var(--navy); text-decoration: none; letter-spacing: -0.02em; }
+  .nav-cta { font-size: 0.8rem; font-weight: 700; color: var(--white); background: var(--blue); padding: 9px 18px; border-radius: 6px; text-decoration: none; }
+  .nav-cta:hover { background: #005aa8; }
+
+  /* HERO */
+  .article-hero { background: var(--white); border-bottom: 3px solid var(--blue); padding: 56px 52px 48px; }
+  .article-hero-inner { max-width: 760px; margin: 0 auto; }
+  .breadcrumb { font-size: 0.73rem; color: var(--grey); margin-bottom: 18px; }
+  .breadcrumb a { color: var(--blue); text-decoration: none; font-weight: 600; }
+  .article-tag { display: inline-block; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); border: 1.5px solid var(--blue); padding: 4px 12px; border-radius: 100px; margin-bottom: 16px; }
+  .article-hero h1 { font-size: clamp(1.65rem, 3.5vw, 2.5rem); font-weight: 700; line-height: 1.1; color: var(--navy); letter-spacing: -0.025em; margin-bottom: 18px; }
+  .article-hero .lead { font-size: 1rem; color: var(--muted); line-height: 1.78; max-width: 620px; border-left: 3px solid var(--blue); padding-left: 18px; margin-top: 4px; }
+  .article-meta { font-size: 0.72rem; color: var(--grey); margin-top: 20px; display: flex; gap: 16px; align-items: center; }
+  .meta-dot { color: var(--border); }
+
+  /* BODY */
+  .article-body { max-width: 760px; margin: 0 auto; padding: 52px 52px 44px; }
+  .article-body h2 { font-size: 1.45rem; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; margin: 44px 0 14px; line-height: 1.2; padding-bottom: 10px; border-bottom: 2px solid var(--border); }
+  .article-body h2:first-of-type { margin-top: 0; }
+  .article-body h3 { font-size: 0.97rem; font-weight: 700; color: var(--navy); margin: 24px 0 8px; }
+  .article-body p { font-size: 0.96rem; color: var(--muted); line-height: 1.82; margin-bottom: 18px; }
+  .article-body strong { color: var(--navy); font-weight: 700; }
+  .article-body a { color: var(--blue); font-weight: 600; text-decoration: none; }
+  .article-body a:hover { text-decoration: underline; }
+  .article-body ul { margin: 0 0 18px; padding-left: 0; list-style: none; }
+  .article-body li { font-size: 0.96rem; color: var(--muted); line-height: 1.78; margin-bottom: 9px; padding-left: 22px; position: relative; }
+  .article-body li::before { content: '\2014'; position: absolute; left: 0; color: var(--blue); font-weight: 700; }
+  .article-body li.check::before { content: '\2713'; color: var(--lite); }
+  .article-body li.sq::before { content: '\25A1'; color: var(--blue); font-size: 0.85rem; top: 3px; font-weight: 400; }
+
+  /* CALLOUT */
+  .callout { background: var(--off); border-left: 4px solid var(--blue); padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 26px 0; }
+  .callout p { margin: 0; font-size: 0.92rem; color: var(--navy); line-height: 1.72; }
+  .callout a { color: var(--blue); font-weight: 700; }
+
+  /* WARNING */
+  .warning { background: #fffbeb; border-left: 4px solid #d97706; padding: 20px 24px; border-radius: 0 8px 8px 0; margin: 26px 0; }
+  .warning p { margin: 0; font-size: 0.92rem; color: #92400e; line-height: 1.72; }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 26px 0; border-radius: 8px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  th { background: var(--navy); color: var(--white); padding: 11px 14px; text-align: left; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--border); color: var(--muted); vertical-align: top; line-height: 1.6; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--off); }
+  td:first-child { font-weight: 700; color: var(--navy); }
+  .badge { display: inline-block; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; white-space: nowrap; }
+  .badge-all { background: rgba(0,112,192,0.1); color: var(--blue); }
+  .badge-res { background: rgba(0,176,80,0.1); color: var(--lite); }
+  .badge-cond { background: rgba(46,95,163,0.1); color: var(--mid); }
+
+  /* INLINE CTA */
+  .inline-cta { background: var(--navy); border-radius: 10px; padding: 36px; margin: 44px 0; text-align: center; }
+  .inline-cta h3 { font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 9px; letter-spacing: -0.01em; }
+  .inline-cta p { font-size: 0.87rem; color: rgba(255,255,255,0.55); margin-bottom: 22px; line-height: 1.65; }
+  .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { display: inline-block; background: var(--blue); color: var(--white); font-weight: 700; font-size: 0.84rem; padding: 11px 22px; border-radius: 6px; text-decoration: none; font-family: Arial, sans-serif; }
+  .btn-primary:hover { background: #005aa8; }
+  .btn-secondary { display: inline-block; background: transparent; color: rgba(255,255,255,0.65); font-size: 0.84rem; padding: 11px 22px; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; text-decoration: none; font-family: Arial, sans-serif; }
+
+  /* CHECKLIST BOX */
+  .checklist { background: var(--off); border-radius: 10px; padding: 28px 32px; margin: 26px 0; border: 1px solid var(--border); }
+  .checklist h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 16px; }
+
+  /* PHASE TIMELINE */
+  .timeline { margin: 26px 0; display: flex; flex-direction: column; gap: 2px; }
+  .phase { display: flex; gap: 0; }
+  .phase-badge { min-width: 52px; background: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; color: var(--white); flex-shrink: 0; padding: 16px 8px; }
+  .phase-content { flex: 1; background: var(--off); border-left: 3px solid var(--blue); padding: 16px 20px; }
+  .phase-content h3 { font-size: 0.94rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .phase-content p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+  /* REQ GRID */
+  .req-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin: 26px 0; }
+  .req-card { background: var(--off); border-radius: 8px; padding: 20px; border: 1px solid var(--border); border-top: 3px solid var(--blue); }
+  .req-card h3 { font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
+  .req-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+  /* SVG diagrams */
+  .diagram-wrap { margin: 28px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--off); padding: 24px; }
+  .diagram-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey); margin-bottom: 16px; }
+
+  /* RELATED */
+  .related { background: var(--off); padding: 48px 52px; border-top: 1px solid var(--border); }
+  .related-inner { max-width: 760px; margin: 0 auto; }
+  .related-eyebrow { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
+  .related h2 { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 18px; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .related-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; text-decoration: none; display: block; transition: border-color 0.18s; border-top: 3px solid transparent; }
+  .related-card:hover { border-color: var(--blue); border-top-color: var(--blue); }
+  .related-card span { font-size: 0.63rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); }
+  .related-card h3 { font-size: 0.87rem; font-weight: 700; color: var(--navy); margin-top: 6px; line-height: 1.4; }
+
+  /* FOOTER */
+  footer { background: var(--navy); padding: 32px 52px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+  .footer-logo { font-size: 1.2rem; font-weight: 700; color: rgba(255,255,255,0.4); text-decoration: none; }
+  .footer-legal { font-size: 0.7rem; color: rgba(255,255,255,0.22); text-align: right; line-height: 1.65; }
+  .footer-legal a { color: rgba(255,255,255,0.28); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .site-nav, .article-hero, .article-body, .related, footer { padding-left: 22px; padding-right: 22px; }
+    footer { flex-direction: column; align-items: flex-start; }
+    .footer-legal { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="/" class="site-logo">Jordi</a>
+  <a href="/#notify" class="nav-cta">Get early access</a>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <div class="breadcrumb"><a href="/">Jordi</a> &rsaquo; Building Regulations guides</div>
+    <span class="article-tag">Golden Thread</span>
+    <h1>What is the Golden Thread of information?</h1>
+    <p class="lead">The Golden Thread is one of the most discussed &mdash; and most misunderstood &mdash; concepts in the Building Safety Act 2022. This guide explains what it actually requires, who is responsible at each stage, and what it means in practice for building design professionals.</p>
+    <div class="article-meta">
+      <span>Published by Jordi</span><span class="meta-dot">&middot;</span>
+      <span>Updated 2026</span><span class="meta-dot">&middot;</span>
+      <span>8 minute read</span>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <h2>The concept in plain English</h2>
+  <p>The Golden Thread is a continuously maintained digital record of all the information relevant to the design, construction, and operation of a Higher-Risk Building. It is the complete, up-to-date, accessible information base that allows anyone responsible for the building&rsquo;s safety &mdash; at any point in its lifecycle &mdash; to understand what decisions were made, why they were made, and how the building currently complies with its regulatory obligations.</p>
+  <p>The Hackitt Review identified that critical information about materials, structural decisions, and fire safety provisions was routinely lost as buildings changed hands. The Golden Thread is the legislative response: an unbroken chain of information from design decision to occupied building.</p>
+
+  <div class="callout">
+    <p><strong>Which buildings?</strong> The formal Golden Thread requirements apply specifically to Higher-Risk Buildings &mdash; residential buildings of 7 or more storeys or 18 metres or more in height, hospitals, and care homes. Good practice principles of structured digital record-keeping apply more broadly to all notifiable projects.</p>
+  </div>
+
+  <div class="diagram-wrap">
+  <p class="diagram-label">Golden Thread responsibility across the building lifecycle</p>
+  <svg viewBox="0 0 720 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+    <!-- Design phase -->
+    <rect x="10" y="20" width="220" height="44" rx="6" fill="#0070C0"/>
+    <text x="120" y="37" text-anchor="middle" fill="white" font-family="Arial" font-size="10" font-weight="700">DESIGN PHASE</text>
+    <text x="120" y="52" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial" font-size="9">Principal Designer (BRPD)</text>
+    <text x="120" y="65" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-family="Arial" font-size="8">Stages 1&ndash;4</text>
+    <!-- Arrow -->
+    <polygon points="230,42 248,35 248,49" fill="#D0DCF0"/>
+    <!-- Construction phase -->
+    <rect x="248" y="20" width="220" height="44" rx="6" fill="#2E5FA3"/>
+    <text x="358" y="37" text-anchor="middle" fill="white" font-family="Arial" font-size="10" font-weight="700">CONSTRUCTION PHASE</text>
+    <text x="358" y="52" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial" font-size="9">Principal Contractor</text>
+    <text x="358" y="65" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-family="Arial" font-size="8">Stage 5</text>
+    <!-- Arrow -->
+    <polygon points="468,42 486,35 486,49" fill="#D0DCF0"/>
+    <!-- Occupation phase -->
+    <rect x="486" y="20" width="224" height="44" rx="6" fill="#1A1A2E"/>
+    <text x="598" y="37" text-anchor="middle" fill="white" font-family="Arial" font-size="10" font-weight="700">OCCUPATION</text>
+    <text x="598" y="52" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial" font-size="9">Principal Accountable Person</text>
+    <text x="598" y="65" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-family="Arial" font-size="8">Ongoing</text>
+    <!-- Golden thread label -->
+    <text x="360" y="93" text-anchor="middle" fill="#666666" font-family="Arial" font-size="9">Golden Thread passes between duty holders at each Gateway handover</text>
+  </svg>
+</div>
+
+  <h2>What the Golden Thread must be</h2>
+  <ul>
+    <li><strong>Electronic</strong> &mdash; a physical file does not meet the requirement.</li>
+    <li><strong>Up to date at all times</strong> &mdash; reflecting the current state of the building, not a past state.</li>
+    <li><strong>Accessible</strong> to all relevant duty holders who need it to discharge their own duties.</li>
+    <li><strong>Structured</strong> &mdash; organised in a way that allows it to be understood and used, not simply stored.</li>
+    <li><strong>Preserved</strong> throughout design and construction, and handed over at Gateway 3.</li>
+  </ul>
+
+  <h2>Who is responsible at each stage</h2>
+  <div class="timeline">
+    <div class="phase">
+      <div class="phase-badge">D</div>
+      <div class="phase-content">
+        <h3>Design phase &mdash; Building Regulations Principal Designer</h3>
+        <p>The BRPD creates and maintains the design-phase component of the Golden Thread from RIBA Stage 2 through to Gateway 3. This includes compliance records at each Work Stage, the change control log during construction, and the compliance drawing sets submitted at each Gateway.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-badge">C</div>
+      <div class="phase-content">
+        <h3>Construction phase &mdash; Principal Contractor</h3>
+        <p>During RIBA Stage 5, the Principal Contractor maintains the Golden Thread for construction work, recording design changes and ensuring they are managed through the change control plan.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="phase-badge">O</div>
+      <div class="phase-content">
+        <h3>Occupation &mdash; Principal Accountable Person</h3>
+        <p>At Gateway 3, the complete Golden Thread is handed to the Principal Accountable Person &mdash; the building owner or manager &mdash; who must maintain it throughout the building&rsquo;s life and keep it current as the building changes.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>What the design-phase Golden Thread must contain</h2>
+  <div class="req-grid">
+    <div class="req-card">
+      <h3>Compliance records by Work Stage</h3>
+      <p>A dated record of what was checked at each RIBA Work Stage, what the findings were, and what design decisions were made in response. Timestamped and version-controlled.</p>
+    </div>
+    <div class="req-card">
+      <h3>Gateway submission documents</h3>
+      <p>The compliance statements, compliance drawing sets, and BRPD declarations submitted at each Gateway. Retained as a permanent record.</p>
+    </div>
+    <div class="req-card">
+      <h3>Change control log</h3>
+      <p>A record of all design changes during construction, each categorised as recordable, notifiable, or major, with the BRPD&rsquo;s assessment and management action.</p>
+    </div>
+    <div class="req-card">
+      <h3>Fire and Emergency File</h3>
+      <p>Fire safety information including fire strategy, escape routes, firefighting provisions, and compartmentation. Updated as changes occur during construction.</p>
+    </div>
+    <div class="req-card">
+      <h3>Design information</h3>
+      <p>Technical drawings, specifications, and design decisions relevant to the building&rsquo;s safety at the level of detail required to understand regulatory compliance.</p>
+    </div>
+    <div class="req-card">
+      <h3>Occurrence reports</h3>
+      <p>Records of any mandatory occurrences &mdash; events that must be reported to the Building Safety Regulator &mdash; and the actions taken in response.</p>
+    </div>
+  </div>
+
+  <h2>The practical challenge</h2>
+  <p>Most design practices and contractors in 2026 are managing project information across email, shared drives, BIM models, PDF annotations, and spreadsheets. None of this is inherently structured, timestamped, version-controlled, or easily accessible to multiple duty holders simultaneously. Building the Golden Thread manually &mdash; retrospectively assembling compliance records from scattered sources &mdash; is the most time-consuming and error-prone element of the BRPD&rsquo;s work. Gaps in the record are difficult to explain and impossible to reconstruct accurately after the fact.</p>
+
+  <div class="inline-cta">
+    <h3>The Golden Thread, built in &mdash; not bolted on</h3>
+    <p>Jordi Professional timestamps, version-controls, and stores every compliance check against the relevant RIBA Work Stage from the moment it is generated. The audit trail builds itself as design develops. By Gateway 2, the Golden Thread is already substantially complete.</p>
+    <div class="cta-row">
+      <a href="/" class="btn-primary">Learn about Jordi Professional</a>
+      <a href="/gateway-2-submission" class="btn-secondary">Gateway 2 requirements &rarr;</a>
+    </div>
+  </div>
+
+</article>
+
+<section class="related">
+  <div class="related-inner">
+    <p class="related-eyebrow">Continue reading</p>
+    <h2>Related guides</h2>
+    <div class="related-grid">
+      <a href="/building-safety-act-2022-architects" class="related-card"><span>Building Safety Act</span><h3>What does the Building Safety Act 2022 mean for building designers?</h3></a>
+      <a href="/principal-designer-role" class="related-card"><span>Principal Designer</span><h3>What is the Building Regulations Principal Designer role?</h3></a>
+      <a href="/gateway-2-submission" class="related-card"><span>Gateway 2</span><h3>What is required for a Gateway 2 submission?</h3></a>
+      <a href="/building-regulations-parts-apply" class="related-card"><span>Compliance</span><h3>Which Parts of the Building Regulations apply to my project?</h3></a>
+    </div>
+  </div>
+</section>
+<footer>
+  <a href="/" class="footer-logo">Jordi</a>
+  <div class="footer-legal">
+    &copy; 2026 Jordi. All rights reserved.<br>
+    <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp;
+    <a href="mailto:team@heyjordi.com">hello@heyjordi.com</a>
+  </div>
+</footer>
+</body>
+</html>
